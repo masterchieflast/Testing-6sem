@@ -1,0 +1,368 @@
+Microsoft Windows [Version 10.0.22631.3085]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\study\sem6\Testing\lab01\git-demo>git add .
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "add first two lines in the song"
+[main a07a7d3] add first two lines in the song
+ 1 file changed, 2 insertions(+)
+ create mode 100644 song.txt
+
+D:\study\sem6\Testing\lab01\git-demo>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 325 bytes | 325.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/masterchieflast/git-demo
+   6aeee44..a07a7d3  main -> main
+
+D:\study\sem6\Testing\lab01\git-demo> git config --global user.email "denis16.05.2004@icloud.com"
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+D:\study\sem6\Testing\lab01\git-demo>git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1004 bytes | 23.00 KiB/s, done.
+From https://github.com/masterchieflast/git-demo
+   a07a7d3..5826663  main       -> origin/main
+Updating a07a7d3..5826663
+Fast-forward
+ song.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+D:\study\sem6\Testing\lab01\git-demo>git checkout -b feature
+Switched to a new branch 'feature'
+
+D:\study\sem6\Testing\lab01\git-demo>echo "The ship glides gently on the waves
+"The ship glides gently on the waves
+
+D:\study\sem6\Testing\lab01\git-demo>As day turns into night" > arrows.txt
+'As' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "first"
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "first"
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\study\sem6\Testing\lab01\git-demo>git add .
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "first"
+[feature e152ced] first
+ 1 file changed, 4 insertions(+)
+ create mode 100644 .gitignore
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch feature
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\study\sem6\Testing\lab01\git-demo>git add .
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "second"
+[feature 060f485] second
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\study\sem6\Testing\lab01\git-demo>git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+D:\study\sem6\Testing\lab01\git-demo>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+D:\study\sem6\Testing\lab01\git-demo>git merge feature
+Updating 5826663..060f485
+Fast-forward
+ .gitignore | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 .gitignore
+
+D:\study\sem6\Testing\lab01\git-demo>git checkout -b feature
+fatal: a branch named 'feature' already exists
+
+D:\study\sem6\Testing\lab01\git-demo>git checkout feature
+Switched to branch 'feature'
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "Added arrows.txt content in feature branch"
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arrows.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\study\sem6\Testing\lab01\git-demo>git add .
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "Added arrows.txt content in feature branch"
+[feature c39a911] Added arrows.txt content in feature branch
+ 1 file changed, 2 insertions(+)
+ create mode 100644 arrows.txt
+
+D:\study\sem6\Testing\lab01\git-demo>git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arrows.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\study\sem6\Testing\lab01\git-demo>git add .
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "Added arrows.txt content in main branch"
+[main 755c4d7] Added arrows.txt content in main branch
+ 1 file changed, 2 insertions(+)
+ create mode 100644 arrows.txt
+
+D:\study\sem6\Testing\lab01\git-demo>git merge feature
+Auto-merging arrows.txt
+CONFLICT (add/add): Merge conflict in arrows.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+D:\study\sem6\Testing\lab01\git-demo>git add .
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "do it"
+[main 8411864] do it
+
+D:\study\sem6\Testing\lab01\git-demo>git checkout -b storm
+Switched to a new branch 'storm'
+
+D:\study\sem6\Testing\lab01\git-demo>git add .
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch storm
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   storm.txt
+
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "inicializate strom.txt"
+[storm 28c9f1a] inicializate strom.txt
+ 1 file changed, 2 insertions(+)
+ create mode 100644 storm.txt
+
+D:\study\sem6\Testing\lab01\git-demo>git add .
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "plus two string"
+[storm 65590b1] plus two string
+ 1 file changed, 2 insertions(+)
+
+D:\study\sem6\Testing\lab01\git-demo>git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "inicializate pursuit.txt at main"
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        pursuit.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        pursuit.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\study\sem6\Testing\lab01\git-demo>git add .
+
+D:\study\sem6\Testing\lab01\git-demo>git commit -m "inicializate pursuit.txt at main"
+[main 327d82b] inicializate pursuit.txt at main
+ 1 file changed, 4 insertions(+)
+ create mode 100644 pursuit.txt
+
+D:\study\sem6\Testing\lab01\git-demo>git tag session1
+
+D:\study\sem6\Testing\lab01\git-demo>git checkout storm
+Switched to branch 'storm'
+
+D:\study\sem6\Testing\lab01\git-demo>git rebase main
+Successfully rebased and updated refs/heads/storm.
+
+D:\study\sem6\Testing\lab01\git-demo>git push origin master --tags
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/masterchieflast/git-demo'
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch storm
+nothing to commit, working tree clean
+
+D:\study\sem6\Testing\lab01\git-demo>git branch main
+fatal: a branch named 'main' already exists
+
+D:\study\sem6\Testing\lab01\git-demo>git push
+fatal: The current branch storm has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin storm
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+D:\study\sem6\Testing\lab01\git-demo>git push origin master --tags
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/masterchieflast/git-demo'
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch storm
+nothing to commit, working tree clean
+
+D:\study\sem6\Testing\lab01\git-demo>git branch main
+fatal: a branch named 'main' already exists
+
+D:\study\sem6\Testing\lab01\git-demo>git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+D:\study\sem6\Testing\lab01\git-demo>git push
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (18/18), 1.68 KiB | 1.68 MiB/s, done.
+Total 18 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/masterchieflast/git-demo
+   5826663..327d82b  main -> main
+
+D:\study\sem6\Testing\lab01\git-demo>git push origin storm
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 619 bytes | 619.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'storm' on GitHub by visiting:
+remote:      https://github.com/masterchieflast/git-demo/pull/new/storm
+remote:
+To https://github.com/masterchieflast/git-demo
+ * [new branch]      storm -> storm
+
+D:\study\sem6\Testing\lab01\git-demo>git push origin feature
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/masterchieflast/git-demo/pull/new/feature
+remote:
+To https://github.com/masterchieflast/git-demo
+ * [new branch]      feature -> feature
+
+D:\study\sem6\Testing\lab01\git-demo>git remote set-url origin https://github.com/masterchieflast/git-demo01
+
+D:\study\sem6\Testing\lab01\git-demo>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+D:\study\sem6\Testing\lab01\git-demo>git push
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (27/27), 3.77 KiB | 1.88 MiB/s, done.
+Total 27 (delta 6), reused 3 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/masterchieflast/git-demo01
+ * [new branch]      main -> main
+
+D:\study\sem6\Testing\lab01\git-demo>git push origin feature
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/masterchieflast/git-demo01/pull/new/feature
+remote:
+To https://github.com/masterchieflast/git-demo01
+ * [new branch]      feature -> feature
+
+D:\study\sem6\Testing\lab01\git-demo>git push origin storm
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 619 bytes | 619.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'storm' on GitHub by visiting:
+remote:      https://github.com/masterchieflast/git-demo01/pull/new/storm
+remote:
+To https://github.com/masterchieflast/git-demo01
+ * [new branch]      storm -> storm
+
+D:\study\sem6\Testing\lab01\git-demo>git remote set-url origin https://github.com/masterchieflast/git-demo
+
+D:\study\sem6\Testing\lab01\git-demo>git remote -v
+origin  https://github.com/masterchieflast/git-demo (fetch)
+origin  https://github.com/masterchieflast/git-demo (push)
+
+D:\study\sem6\Testing\lab01\git-demo>
