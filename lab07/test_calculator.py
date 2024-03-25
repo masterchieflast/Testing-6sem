@@ -1,6 +1,7 @@
 import unittest
 from calculator import Calculator
 
+
 class TestCalculator(unittest.TestCase):
 
     def setUp(self):
@@ -27,6 +28,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calculator.divide(0, 5), 0)
         with self.assertRaises(ValueError):
             self.calculator.divide(5, 0)
+
 
 if __name__ == '__main__':
     unittest.main()
