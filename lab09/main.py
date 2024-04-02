@@ -96,7 +96,6 @@ class AppleWebsiteTest(unittest.TestCase):
             quantity_dropdown = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.CLASS_NAME, 'rs-quantity-dropdown'))
             )
-
             # Получаем текущее значение элемента
             print("всё классно, ехууу")
             current_value = quantity_dropdown.get_attribute('value')
