@@ -1,9 +1,9 @@
 import unittest
 from selenium import webdriver
-from pages.home_page import AppleHomePage
-from pages.iphone_page import IPhonePage
-from pages.iphone_model_page import IPhoneModelPage
-from pages.shopping_cart_page import ShoppingCartPage
+from ..pages.home_page import AppleHomePage
+from ..pages.iphone_page import IPhonePage
+from ..pages.iphone_model_page import IPhoneModelPage
+from ..pages.shopping_cart_page import ShoppingCartPage
 
 
 class AppleWebsiteTest(unittest.TestCase):
