@@ -1,9 +1,13 @@
+import sys
+import os
 import unittest
 from selenium import webdriver
 from ..pages.home_page import AppleHomePage
 from ..pages.iphone_page import IPhonePage
 from ..pages.iphone_model_page import IPhoneModelPage
 from ..pages.shopping_cart_page import ShoppingCartPage
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 
 class AppleWebsiteTest(unittest.TestCase):
