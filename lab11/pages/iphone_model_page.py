@@ -10,6 +10,12 @@ class IPhoneModelPage(BasePage):
         self.color_link = (By.XPATH,
                            "//label[contains(@class,'colornav-link rc-dimension-colornav-link "
                            "rf-bfe-product-dimension-colornav-label')]")
+        self.color_link = (By.XPATH,
+                           "//label[contains(@class,'colornav-link rc-dimension-colornav-link "
+                           "rf-bfe-product-dimension-colornav-label')]")
+        self.color_link2 = (By.XPATH,
+                            "(//label[contains(@class,'colornav-link rc-dimension-colornav-link "
+                            "rf-bfe-product-dimension-colornav-label')])[3]")
         self.storage_link = (By.XPATH, "(//div[@class='rc-dimension-selector-row form-selector'])[3]")
         self.trade_in_link = (
             By.XPATH, "(//div[@class='rc-dimension-multiple column large-6 small-6 form-selector'])[2]")
@@ -25,17 +31,22 @@ class IPhoneModelPage(BasePage):
             "(//div[@class='form-selector column large-4 small-12 rf-accessory-applecare-fullwidth-option'])[1]")
         self.bug_link = (By.XPATH, "//button[@class='button button-block']")
         self.renew_bug_link = (By.XPATH, "//button[@class='button button-block button-super']")
+        self.image_wrapper = (By.CLASS_NAME, 'rf-bfe-gallery-image-wrapper')
 
     def click_buy_link(self):
         self.click_element(self.buy_link)
 
     def click_model_link(self):
         self.click_element(self.model_link)
-        self.wait_for_element_to_be_clickable(self.model_link)  # <-- Change this line
+        self.wait_for_element_to_be_clickable(self.model_link)
 
     def click_color_link(self):
         self.click_element(self.color_link)
         self.wait_for_element_to_be_clickable(self.color_link)
+
+    def click_color_link2(self):
+        self.click_element(self.color_link2)
+        self.wait_for_element_to_be_clickable(self.color_link2)
 
     def click_storage_link(self):
         self.click_element(self.storage_link)
@@ -64,3 +75,6 @@ class IPhoneModelPage(BasePage):
     def click_renew_bug_link(self):
         self.wait_for_element_to_be_clickable(self.renew_bug_link)
         self.click_element(self.renew_bug_link)
+
+    def image_obj(self):
+        return self.wait_for_element(self.image_wrapper)
